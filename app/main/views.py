@@ -66,13 +66,13 @@ def comment(id):
   blogcomment = Comment.query.filter_by(blog_id=id).all()
   quote = get_quotes()
 
-  return render_template('profile/comment.html', comment=form, blog=blog, blogcomment = blogcomment, quote=quote)
+  return render_template('profile/Comments.html', comment=form, blog=blog, blogcomment = blogcomment, quote=quote)
 
 @main.route('/post/<id>/comments', methods=['GET'])
 def viewcomments(id):
   allcomments = Comment.query.filter_by(blog_id=id).all()
   quote = get_quotes()
-  return render_template('profile/viewcomment.html', allcomments=allcomments, quote=quote)
+  return render_template('profile/viewComments.html', allcomments=allcomments, quote=quote)
 
 @main.route('/post/<id>/delete', methods = ['GET', 'POST'])
 def deletePost(id):

@@ -30,7 +30,7 @@ def postblog():
     newblog.save_blog()
 
     for i in Subscribe.query.all():
-      mail_message("New Blog Is Out", "email/update_subscriber", i.email, newblog=newblog)
+      mail_message("New Blog Is Out", "email/update_user", i.email, newblog=newblog)
 
     return redirect(url_for('main.profile', uname=current_user.username))
 
@@ -93,6 +93,6 @@ def subscribe():
         email = request.form.get('subscriber')
         new_sub = Subscribe(email=email)
         new_sub.save_subscriber()
-        mail_message("email/welcome_subscriber", email)
+        mail_message("email/welcome_user", email)
 
         return redirect(url_for('main.index'))

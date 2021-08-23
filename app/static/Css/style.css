@@ -1,0 +1,116 @@
+/* * {
+	font-family: Ubuntu;
+} */
+
+body {
+	background-color: rgba(223, 213, 213, 0.28);
+	/* background-image: url('/static/images/bg2.png');
+	background-repeat: no-repeat;
+	background-position: bottom bottom;
+	background-size: cover; */
+	background-blend-mode: darken;
+}
+
+.navcustom {
+	background-color: black;
+	min-height: 80px;
+}
+
+.navbar-header a.title {
+	color: white;
+	font-size: 35px;
+}
+
+.navbar-header span {
+	color: Purple;
+	font-size: 35px;
+}
+
+.navcustom ul {
+	width: 100%;
+}
+
+.navcustom>.container-fluid ul li {
+	margin: 0px;
+}
+
+.navcustom ul li>.title {
+	font-size: 30px;
+	text-decoration: none;
+	color: black;
+}
+
+.navcustom ul li>.other {
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+	border-radius: 40px;
+	min-width: 120px;
+	text-align: center;
+	padding: 10px;
+}
+
+.navcustom ul li>.other:hover {
+	color: white;
+	border-radius: 40px;
+	min-width: 120px;
+	text-align: center;
+	background-color: maroon;
+}
+
+.indexblog {
+	border: 0.5px solid;
+	border-bottom: 5px solid;
+	border-radius: 5px 10px 2px 2px;
+}
+
+.blogcont {
+	width: 1000px;
+
+}
+
+.blogcomment {
+	background-color: rgba(0, 0, 0, 0.315);
+	padding: 15px;
+	border-radius: 5px;
+}
+
+
+.loginForm {
+	background-color: rgba(0, 0, 0, 0.09);
+	width: 450px;
+	padding: 20px;
+	border: 2px solid;
+	border-radius: 10px;
+}
+
+input[type='submit'] {
+	margin-top: 5px;
+	border: 1px solid #4B9E92;
+	background-color: white;
+	color: black;
+}
+
+input[type='submit']:hover {
+	border: 1px solid white;
+	background-color: maroon;
+	color: white;
+}
+
+.postForm {
+	background-color: rgba(0, 0, 0, 0.09);
+	width: 1000px;
+	padding: 20px;
+	border: 2px solid;
+	border-radius: 10px;
+}
+
+.blogpro {
+	border: 1px solid;
+	border-top: 0px solid;
+	border-bottom: 5px solid;
+	margin-top: 7px;
+	padding: 15px;
+	border-radius: 4px 4px 10px 4px;
+	margin-top: 10px;
+}

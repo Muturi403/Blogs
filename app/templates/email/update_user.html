@@ -1,0 +1,8 @@
+<h3>New Blog Out!! Check it Out</h3>
+<br>
+<p>A new blog has been published by {{ newblog.users }}.</p>
+<div class="container">
+  <h3>{{newblog.title }}</h3>
+  <p>{{ newblog.content | truncate(150) }}</p>
+  <a href="#">Click for More</a>
+</div>

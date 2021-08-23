@@ -10,7 +10,6 @@ class Config:
   MAIL_USE_TLS = True
   MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
   MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-  UPLOADED_PHOTOS_DEST = 'app/static/photos'
   QUOTE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
 
 class ProdConfig(Config):
@@ -20,7 +19,7 @@ class ProdConfig(Config):
         SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace('postgres://', "postgresql://", 1)
 
 class DevConfig(Config):
-  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://layersony:1q2w3e4r5t6y@localhost/personalblog'
+  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:1q2w3e4r5t6y@localhost/Blogs'
   DEBUG = True
 
 config_options = {

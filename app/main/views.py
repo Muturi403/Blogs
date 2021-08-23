@@ -35,7 +35,7 @@ def postblog():
     return redirect(url_for('main.profile', uname=current_user.username))
 
   quote = get_quotes()
-  return render_template('profile/postblog.html', blogform=blogform, quote=quote)
+  return render_template('profile/blogs.html', blogform=blogform, quote=quote)
 
 @main.route('/user/<uname>')
 @login_required

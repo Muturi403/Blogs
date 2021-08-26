@@ -1,7 +1,7 @@
 <div class="navbar navcustom" role="navigation">
   <div class="container-fluid">
       <div class="navbar-header">
-          <a href='/' class="nav-item nav-link title ml-md-3"><span>Blogs</span></a>
+          <a href='/' class="nav-item nav-link title  btn btn-outline-primary ml-md-3"><span>Blogs</span></a>
       </div>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,19 +10,19 @@
 
       <form class="d-md-flex justify-content-center align-items-center" action="{{url_for('main.subscribe')}}" method="POST">
         <input type="email"  class="form-control " name ="subscriber" required placeholder="Email Address...">
-        <button class="btn btn-md btn-outline-info ml-2" id="subs">Subscribe</button>
+        <button class="btn btn-md btn-outline-primary ml-2" id="subs">Subscribe</button>
       </form>
 
 
       <div class="nav navbar-nav navbar">
         <ul class="nav d-flex">
-          <li><a class="nav-item other" href="/">Home</a></li>
-          <li><a class="nav-item other" href="{{ url_for('main.postblog') }}">Post A Blog</a></li>
+          <li><a class="nav-item other btn btn-outline-primary m-3" href="/">Home</a></li>
+          <li><a class="nav-item other btn btn-outline-primary m-3" href="{{ url_for('main.postblog') }}">Post A Blog</a></li>
           {% if current_user.is_authenticated %}
-          <li><a class="nav-item other" href="{{ url_for('main.profile', uname = current_user.username) }}">{{ current_user.username| capitalize }}</a></li>
-          <li><a class="nav-item other" href="{{url_for('auth.logout')}}">Log Out</a></li>
+          <li><a class="nav-item other  btn btn-outline-primary m-3" href="{{ url_for('main.profile', uname = current_user.username) }}">{{ current_user.username| capitalize }}</a></li>
+          <li><a class="nav-item other btn btn-outline-primary m-3" href="{{url_for('auth.logout')}}">Log Out</a></li>
           {% else %}
-          <li><a class="nav-item other" href="{{url_for('auth.login')}}">Sign In</a></li>
+          <li><a class="nav-item other btn btn-outline-primary m-3" href="{{url_for('auth.login')}}">Sign In</a></li>
           {% endif %}
         </ul>
 
